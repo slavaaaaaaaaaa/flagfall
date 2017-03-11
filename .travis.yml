@@ -7,6 +7,8 @@ os:
 before_install:
   - echo $LANG
   - echo $LC_ALL
+install:
+  - sudo apt-get install libboost-all-dev
 script:
   - g++ entry.cpp
   - ./a.out

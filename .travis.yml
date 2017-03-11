@@ -1,9 +1,12 @@
-language: cpp
+language:
+  - cpp
 compiler:
-  - clang
+  - gcc
 os:
   - linux
 before_install:
   - echo $LANG
   - echo $LC_ALL
-script: g++ entry.cpp
+script:
+  - g++ entry.cpp
+  - ./a.out

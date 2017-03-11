@@ -2,3 +2,7 @@
 
 * TODO: write this thing
 * TODO: makefile
+
+## Contributing
+
+No thanks, but feel free to read and complain

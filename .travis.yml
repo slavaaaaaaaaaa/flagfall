@@ -1,7 +1,7 @@
 language:
   - cpp
 compiler:
-  - gcc
+  - g++
 os:
   - linux
 before_install:
@@ -10,5 +10,4 @@ before_install:
 install:
   - sudo apt-get install libboost-all-dev
 script:
-  - g++ entry.cpp
-  - ./a.out
+  - make test

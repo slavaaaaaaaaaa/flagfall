@@ -1,11 +1,11 @@
-#ifndef PIECES_HPP
-#define PIECES_HPP
+#ifndef PIECES_H
+#define PIECES_H
 
 #include <string>
 #include <vector>
 #include <iostream>
 #include <boost/lexical_cast.hpp>
-#include "board.hpp"
+#include "board.h"
 
 using namespace std;
 
@@ -31,7 +31,7 @@ public:
     int getPosy();
     string getPos();
     char getColor();
-    vector<string> getLegalMoves(Board &b);
+    vector<string> getLegalMoves(Board b);
 
     void setPosx(char newPosx);
     void setPosy(int newPosy);
@@ -43,7 +43,7 @@ public:
 
 class Pawn: public Piece {
 public:
-    vector<string> getLegalMoves(Board &b);
+    vector<string> getLegalMoves(Board b);
 };
 
 #endif

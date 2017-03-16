@@ -1,15 +1,16 @@
-#ifndef PIECE_HPP
-#define PIECE_HPP
+#ifndef PIECES_HPP
+#define PIECES_HPP
 
 #include <string>
 #include <vector>
 #include <iostream>
 #include <boost/lexical_cast.hpp>
+#include "board.hpp"
 
 using namespace std;
 
 class Piece {
-private:
+protected:
     char posx;
     int posy;
     string pos;
@@ -21,7 +22,6 @@ private:
     void calculatePosition();
     void calculateCoords();
 
-    friend ostream& operator<<(ostream&, const Piece&);
 public:
     Piece();
     Piece(char newPosx, int newPosy, char newColor);
@@ -31,10 +31,19 @@ public:
     int getPosy();
     string getPos();
     char getColor();
+    vector<string> getLegalMoves(Board &b);
 
     void setPosx(char newPosx);
     void setPosy(int newPosy);
     void setPos(string newPos);
     void setColor(char newColor);
+
+    void printMe();
 };
+
+class Pawn: public Piece {
+public:
+    vector<string> getLegalMoves(Board &b);
+};
+
 #endif

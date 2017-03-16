@@ -1,5 +1,6 @@
 #include <iostream>
-#include "piece.cpp"
+#include "pieces.cpp"
+#include "board.cpp"
 
 using namespace std;
 
@@ -8,16 +9,29 @@ main()
     cout << "twenty pizza a day" << endl;
     Piece pizza;
 
-    cout << pizza << endl;
+    pizza.printMe();
 
     pizza.setPos("e2");
-    cout << pizza << endl;
+    pizza.printMe();
 
     pizza.setPosx('e');
-    cout << pizza << endl;
+    pizza.printMe();
     pizza.setPosy(4);
-    cout << pizza << endl;
+    pizza.printMe();
 
+    Pawn pasta;
+    pasta.printMe();
+    Board board;
+    cout << board.getMoves() << endl;
+
+    pasta.getLegalMoves(board);
+
+    pasta.printMe();
+    //so far so good, wow
+
+    pasta.setPos("e2");
+    pasta.printMe();
+    pasta.getLegalMoves(board);
+    pasta.printMe();
     return 0;
 }
-

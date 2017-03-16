@@ -1,4 +1,4 @@
-#include "pieces.hpp"
+#include "pieces.h"
 
 //TODO: destructor
 //TODO: objectize the position
@@ -90,11 +90,11 @@ void Piece::printMe() {
     cout << endl;
 }
 
-vector<string> Piece::getLegalMoves(Board &b) {
+vector<string> Piece::getLegalMoves(Board b) {
     return legalMoves;
 }
 
-vector<string> Pawn::getLegalMoves(Board &b) {
+vector<string> Pawn::getLegalMoves(Board b) {
     legalMoves.clear();
 
     if (!b.at(this->posx + boost::lexical_cast<std::string>(this->posy + 1)))

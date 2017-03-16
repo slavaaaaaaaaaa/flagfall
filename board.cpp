@@ -1,4 +1,4 @@
-#include "board.hpp"
+#include "board.h"
 
 Board::Board() {
     cout << "making a bored" << endl;

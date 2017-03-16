@@ -1,5 +1,5 @@
-#ifndef BOARD_HPP
-#define BOARD_HPP
+#ifndef BOARD_H
+#define BOARD_H
 
 using namespace std;
 

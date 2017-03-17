@@ -1,5 +1,5 @@
-#ifndef PIECES_H
-#define PIECES_H
+#ifndef PIECE_H
+#define PIECE_H
 
 #include <string>
 #include <vector>
@@ -39,11 +39,6 @@ public:
     void setColor(char newColor);
 
     void printMe();
-};
-
-class Pawn: public Piece {
-public:
-    vector<string> getLegalMoves(Board b);
 };
 
 #endif

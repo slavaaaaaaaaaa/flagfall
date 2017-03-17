@@ -1,6 +1,7 @@
 #include <iostream>
-#include "pieces.cpp"
-#include "board.cpp"
+#include "../src/piece.cpp"
+#include "../src/pawn.cpp"
+#include "../src/board.cpp"
 
 using namespace std;
 

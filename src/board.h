@@ -15,6 +15,7 @@ public:
 
     int getMoves();
     Piece* at(string pos);
+    bool inBounds(string pos);
 };
 
 #endif

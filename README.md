@@ -1,8 +1,11 @@
 # flagfall [![Build Status](https://travis-ci.org/smaslennikov/flagfall.svg?branch=master)](https://travis-ci.org/smaslennikov/flagfall)
 
-* TODO: write this thing
-* TODO: makefile
+A library that implements a chess game with several AI player strategies.
+
+## Completion status
+
+Far from it
 
 ## Contributing
 
-No thanks, but feel free to read and complain
+Feel free to submit a PR and I'll review it as soon as I can! Issue submission is similarly welcome and encouraged for both practical and theoretical... suggestions.

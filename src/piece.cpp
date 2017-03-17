@@ -1,6 +1,5 @@
-#include "pieces.h"
+#include "piece.h"
 
-//TODO: destructor
 //TODO: objectize the position
 Piece::Piece() {
     cout << "making a peace" << endl;
@@ -33,11 +32,13 @@ Piece::Piece(string newPos, char newColor) {
 
 void Piece::calculatePosition() {
     this->pos = posx + boost::lexical_cast<std::string>(posy);
+    this->legalMoves.clear();
 }
 
 void Piece::calculateCoords() {
     this->posx = this->pos[0];
     this->posy = this->pos[1] - '0';
+    this->legalMoves.clear();
 }
 
 char Piece::getPosx() {
@@ -73,6 +74,7 @@ void Piece::setPos(string newPos) {
 
 void Piece::setColor(char newColor) {
     this->color = newColor;
+    this->legalMoves.clear();
 }
 
 void Piece::printMe() {
@@ -91,20 +93,5 @@ void Piece::printMe() {
 }
 
 vector<string> Piece::getLegalMoves(Board b) {
-    return legalMoves;
-}
-
-vector<string> Pawn::getLegalMoves(Board b) {
-    legalMoves.clear();
-
-    if (!b.at(this->posx + boost::lexical_cast<std::string>(this->posy + 1)))
-        legalMoves.push_back(this->posx + boost::lexical_cast<std::string>(this->posy + 1)); // one up
-    if (!b.at(this->posx + boost::lexical_cast<std::string>(this->posy + 2)) && this->moveCounter == 0)
-        legalMoves.push_back(this->posx + boost::lexical_cast<std::string>(this->posy + 2)); // two up
-    if (b.at(static_cast<char>(this->posx + 1) + boost::lexical_cast<std::string>(this->posy + 1)))
-        legalMoves.push_back(static_cast<char>(this->posx + 1) + boost::lexical_cast<std::string>(this->posy + 1)); // diagonal to the right
-    if (b.at(static_cast<char>(this->posx - 1) + boost::lexical_cast<std::string>(this->posy + 1)))
-        legalMoves.push_back(static_cast<char>(this->posx - 1) + boost::lexical_cast<std::string>(this->posy + 1)); // diagonal to the left
-
     return legalMoves;
 }

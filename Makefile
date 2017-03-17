@@ -15,16 +15,16 @@ CFLAGS_FUNCTIONAL=-Wall $(DEBUG)
 CFLAGS=-Wall -c $(DEBUG)
 LFLAGS=-Wall $(DEBUG)
 
-$(BINDIR)/pawntests: $(SOURCES)
+$(BINDIR)/pawntests: $(SOURCES) $(BINDIR)
 	$(CC) $(CFLAGS_FUNCTIONAL) $(TSTDIR)/pawntests.cpp -o $(BINDIR)/pawntests
 	./$(BINDIR)/pawntests
 
-$(BINDIR)/kingtests: $(SOURCES)
+$(BINDIR)/kingtests: $(SOURCES) $(BINDIR)
 	$(CC) $(CFLAGS_FUNCTIONAL) $(TSTDIR)/kingtests.cpp -o $(BINDIR)/kingtests
 	./$(BINDIR)/kingtests
 
 
-$(BIN):
+$(BINDIR):
 	mkdir $@
 
 tar:

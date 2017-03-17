@@ -23,6 +23,10 @@ $(BINDIR)/kingtests: $(SOURCES)
 	$(CC) $(CFLAGS_FUNCTIONAL) $(TSTDIR)/kingtests.cpp -o $(BINDIR)/kingtests
 	./$(BINDIR)/kingtests
 
+
+$(BIN):
+	mkdir $@
+
 tar:
 	tar cfz flagfall.tar.gz $(SRCDIR) README LICENSE Makefile
 

@@ -10,4 +10,5 @@ before_install:
 install:
   - sudo apt-get install libboost-all-dev
 script:
-  - make test
+  - make bin/kingtests
+  - make bin/pawntests

@@ -4,7 +4,14 @@ A library that implements a chess game with several AI player strategies.
 
 ## Completion status
 
-Far from it
+Far from it:
+
+* pieces & board objects
+* gameplay logic
+ * pieces' moves
+ * positions
+* ai player logic
+* GUI (?)
 
 ## Contributing
 

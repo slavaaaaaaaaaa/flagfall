@@ -5,7 +5,7 @@
 
 using namespace std;
 
-main()
+int main()
 {
     cout << "twenty pizza a day" << endl;
     Piece pizza;

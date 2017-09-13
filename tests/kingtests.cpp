@@ -5,7 +5,7 @@
 
 using namespace std;
 
-main()
+int main()
 {
     cout << "time to test some kinggs" << endl;
     King kong;

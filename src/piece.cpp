@@ -31,7 +31,6 @@ Piece::Piece(std::string newPos, char newColor) {
 }
 
 void Piece::calculatePosition() {
-    //this->pos = posx + boost::lexical_cast<std::string>(posy);
     this->pos = posx + std::to_string(posy);  // Getting rid of boost dependency
     this->legalMoves.clear();
 }

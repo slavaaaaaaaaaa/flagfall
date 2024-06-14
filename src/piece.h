@@ -4,10 +4,7 @@
 #include <string>
 #include <vector>
 #include <iostream>
-//#include <boost/lexical_cast.hpp>
 #include "board.h"
-
-//using namespace std;
 
 class Piece {
 protected:

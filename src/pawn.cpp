@@ -1,13 +1,13 @@
 #include "pawn.h"
 
-vector<string> Pawn::getLegalMoves(Board b) {
+std::vector<std::string> Pawn::getLegalMoves(Board b) {
     legalMoves.clear();
 
-    string moves [4] = {
-        this->posx + boost::lexical_cast<std::string>(this->posy + 1), // up one
-        this->posx + boost::lexical_cast<std::string>(this->posy + 2), // up two
-        static_cast<char>(this->posx - 1) + boost::lexical_cast<std::string>(this->posy + 1), // diag left
-        static_cast<char>(this->posx + 1) + boost::lexical_cast<std::string>(this->posy + 1) // diag right
+    std::string moves [4] = {
+        this->posx + std::to_string(this->posy + 1), // up one
+        this->posx + std::to_string(this->posy + 2), // up two
+        static_cast<char>(this->posx - 1) + std::to_string(this->posy + 1), // diag left
+        static_cast<char>(this->posx + 1) + std::to_string(this->posy + 1) // diag right
     };
 
     if (!b.at(moves[0]))

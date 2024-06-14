@@ -3,3 +3,7 @@
 
 obj/
 bin/
+
+build/
+bin/
+lib/

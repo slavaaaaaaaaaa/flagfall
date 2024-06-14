@@ -2,7 +2,7 @@
 
 //TODO: objectize the position
 Piece::Piece() {
-    cout << "making a peace" << endl;
+    std::cout << "making a peace" << "\n";
     this->posx = 'a';
     this->posy = 1;
     this->calculatePosition();
@@ -12,7 +12,7 @@ Piece::Piece() {
 }
 
 Piece::Piece(char newPosx, int newPosy, char newColor) {
-    cout << "making a peace" << endl;
+    std::cout << "making a peace" << "\n";
     this->posx = newPosx;
     this->posy = newPosy;
     this->calculatePosition();
@@ -21,8 +21,8 @@ Piece::Piece(char newPosx, int newPosy, char newColor) {
 //    this->legalMoves = {};
 }
 
-Piece::Piece(string newPos, char newColor) {
-    cout << "making a peace" << endl;
+Piece::Piece(std::string newPos, char newColor) {
+    std::cout << "making a peace" << "\n";
     this->pos = newPos;
     this->calculateCoords();
     this->color = newColor;
@@ -31,7 +31,8 @@ Piece::Piece(string newPos, char newColor) {
 }
 
 void Piece::calculatePosition() {
-    this->pos = posx + boost::lexical_cast<std::string>(posy);
+    //this->pos = posx + boost::lexical_cast<std::string>(posy);
+    this->pos = posx + std::to_string(posy);  // Getting rid of boost dependency
     this->legalMoves.clear();
 }
 
@@ -49,7 +50,7 @@ int Piece::getPosy() {
     return this->posy;
 }
 
-string Piece::getPos() {
+std::string Piece::getPos() {
     return this->pos;
 }
 
@@ -67,7 +68,7 @@ void Piece::setPosy(int newPosy) {
     calculatePosition();
 }
 
-void Piece::setPos(string newPos) {
+void Piece::setPos(std::string newPos) {
     this->pos = newPos;
     calculateCoords();
 }
@@ -78,7 +79,7 @@ void Piece::setColor(char newColor) {
 }
 
 void Piece::printMe() {
-    cout << "I'm a piece: " << "\n"
+    std::cout << "I'm a piece: " << "\n"
             "\tpos x: \t" << this->posx << "\n"
             "\tpos y: \t" << this->posy << "\n"
             "\tpos: \t" << this->pos << "\n"
@@ -86,12 +87,12 @@ void Piece::printMe() {
             "\tmoves: \t" << this->moveCounter << "\n"
             "\tlegalMoves: \t";
 
-    for (std::vector<string>::const_iterator m = this->legalMoves.begin(); m != this->legalMoves.end(); ++m)
-        cout << *m << ' ';
+    for (std::vector<std::string>::const_iterator m = this->legalMoves.begin(); m != this->legalMoves.end(); ++m)
+        std::cout << *m << ' ';
 
-    cout << endl;
+    std::cout << "\n";
 }
 
-vector<string> Piece::getLegalMoves(Board b) {
+std::vector<std::string> Piece::getLegalMoves(Board b) {
     return legalMoves;
 }

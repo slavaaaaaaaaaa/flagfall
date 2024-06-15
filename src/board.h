@@ -1,7 +1,7 @@
 #ifndef BOARD_H
 #define BOARD_H
 
-using namespace std;
+#include <iostream>
 
 class Piece;
 
@@ -14,8 +14,8 @@ public:
     Board(); //TODO: preset positions
 
     int getMoves();
-    Piece* at(string pos);
-    bool inBounds(string pos);
+    Piece* at(std::string pos);
+    bool inBounds(std::string pos);
 };
 
 #endif

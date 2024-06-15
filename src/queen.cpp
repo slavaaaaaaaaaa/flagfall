@@ -1,9 +1,9 @@
 #include "queen.h"
 
-vector<string> Queen::getLegalMoves(Board b) {
+std::vector<std::string> Queen::getLegalMoves(Board b) {
     legalMoves.clear();
 
-    string moves [] = {
+    std::string moves [] = {
     };
 
     for(unsigned int i = 0; i < sizeof(moves)/sizeof(moves[0]); i++) {

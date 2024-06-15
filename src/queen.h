@@ -5,7 +5,7 @@
 
 class Queen: public Piece {
 public:
-    vector<string> getLegalMoves(Board b);
+    std::vector<std::string> getLegalMoves(Board b);
 };
 
 #endif
